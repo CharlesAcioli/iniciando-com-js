@@ -28,3 +28,22 @@ const somarNumeros = () => {
 };
 
 btnSomar.addEventListener("click", somarNumeros, false);
+
+// + SOMA
+// - SUBTRAÇÃO
+// * MULTIPLICAÇÃO
+// / DIVISÃO
+// % RESTO DA DIVISÃO -> 4%2 = 0
+
+// ENTRADA DE DADOS COM FORMULÁRIO HTML
+
+const form = document.forms.registro;
+const msgCadastro = document.querySelector("#msgcadastro");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const { nome, sobrenome } = form;
+  console.log(nome.value, sobrenome.value);
+  msgCadastro.innerHTML = `<small>${nome.value} ${sobrenome.value} cadastro com sucesso</small>`;
+});
